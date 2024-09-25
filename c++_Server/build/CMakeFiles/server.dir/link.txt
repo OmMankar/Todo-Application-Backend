@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/server.dir/server.cpp.o -o server  -Wl,-rpath,/usr/local/lib64 /usr/local/lib64/libsoci_mysql.so.4.0.1 /usr/local/lib64/libsoci_core.so.4.0.1 /usr/lib/x86_64-linux-gnu/libdl.a /usr/lib/x86_64-linux-gnu/libmysqlclient.so 
