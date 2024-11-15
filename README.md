@@ -112,5 +112,5 @@ CREATE TABLE todo (
 - **CORS():** Sets CORS headers.
 - **createTodo():** Adds a new to-do entry.
 - **getTodos():** Retrieves all to-do entries.
-- **deleteTodo():**Deletes a to-do entry based on the provided event and date.
+- **deleteTodo():** Deletes a to-do entry based on the provided event and date.
 - **startServer():** Starts the HTTP server on localhost:8080.
