@@ -48,7 +48,7 @@ TodoApp is a C++ server application that provides a simple REST API for managing
 
   sql
   ```
-  REATE DATABASE todoApp;
+  CREATE DATABASE todoApp;
 USE todoApp;
 
 CREATE TABLE todo (
@@ -87,7 +87,7 @@ CREATE TABLE todo (
       ```
       curl -X POST http://localhost:8080/createTodo -d '{"event":"Meeting","date":"2023-11-14"}'
       ```
-    - ### Get Todos
+ - ### Get Todos
 
     -  **Endpoint:** /getTodo
     -  **Method:** GET
