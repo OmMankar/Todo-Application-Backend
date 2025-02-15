@@ -35,7 +35,7 @@ TodoApp is a C++ server application that provides a simple REST API for managing
   bash
   ```
   git clone https://github.com/OmMankar/Todo-Application-Backend.git
-  cd TodoApp
+  cd Todo-Application-Backend
   ```
  ### 2. Install dependencies:
 
