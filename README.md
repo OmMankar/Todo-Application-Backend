@@ -45,31 +45,15 @@ TodoApp is a C++ server application that provides a simple REST API for managing
   ```
   sudo apt install git cmake gcc g++ build-essential  libmysqlclient-dev
   ```
-- Building cpp-httplib
+- Fetching Dependancies
   ```
-    git clone https://github.com/yhirose/cpp-httplib.git
-    cd cpp-httplib
-    mkdir build
-    cd build
-    cmake -G "Unix Makefiles" ..
-    cmake --build .
-
+  git submodule update --init --recursive
   ```
 
-- Building json
-  ```
-    git clone https://github.com/nlohmann/json.git
-    cd json
-    mkdir build
-    cd build
-    cmake -G "Unix Makefiles" ..
-    cmake --build .
-  ```
 
 - Building soci
   ```
-    git clone https://github.com/SOCI/soci.git 
-    cd soci
+    cd thirdparty/soci
     mkdir -p build
     cd build
     git checkout v4.0.1

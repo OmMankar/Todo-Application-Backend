@@ -1,8 +1,8 @@
 #ifndef TODO_APP_H
 #define TODO_APP_H
 
-#include "/home/om/projects/cpp-httplib/httplib.h"
-#include "/home/om/projects/json-develop/single_include/nlohmann/json.hpp"
+#include "thirdparty/cpp-httplib/httplib.h"
+#include "thirdparty/json/single_include/nlohmann/json.hpp"
 // #include <soci/mysql/soci-mysql.h>
 #include "soci/mysql/soci-mysql.h"
 #include "soci/rowset.h"

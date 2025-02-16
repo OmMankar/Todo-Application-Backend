@@ -1,0 +1,9 @@
+[submodule "thirdparty/soci"]
+	path = thirdparty/soci
+	url = https://github.com/SOCI/soci.git
+[submodule "thirdparty/cpp-httplib"]
+	path = thirdparty/cpp-httplib
+	url = https://github.com/yhirose/cpp-httplib.git
+[submodule "thirdparty/json"]
+	path = thirdparty/json
+	url = https://github.com/nlohmann/json.git
