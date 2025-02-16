@@ -15,10 +15,13 @@ TodoApp is a C++ server application that provides a simple REST API for managing
 ## Prerequisites
 - C++17 or later.
 - MySQL server.
-- Required C++ libraries:
+- Required C++ Libraries files:
     - **cpp-httplib**: HTTP server library ([cpp-httplib](https://github.com/yhirose/cpp-httplib))
-    - **SOCI**: Database library with MySQL support ([SOCI](https://github.com/SOCI/soci))
     - **nlohmann/json**: JSON parser ([nlohmann/json](https://github.com/nlohmann/json))
+    - **SOCI**: Database library with MySQL support ([SOCI](https://github.com/SOCI/soci))
+   
+
+ 
 
 ## Directory Structure
 ```
@@ -30,19 +33,52 @@ TodoApp is a C++ server application that provides a simple REST API for managing
    ├──README.md                 # Project documentation
 ```
 ## Setup
- ### 1. Clone the repository:
+ ### 1.Installing prerequisites (ubuntu)
+  ```
+  sudo apt install git cmake gcc g++ build-essential  libmysqlclient-dev
+  ```
 
-  bash
+ ### 2. Clone the repository:
   ```
   git clone https://github.com/OmMankar/Todo-Application-Backend.git
   cd Todo-Application-Backend
   ```
- ### 2. Install dependencies:
+ ### 3. Clone and Build dependencies:
+- Building cpp-httplib
+  ```
+    git clone https://github.com/yhirose/cpp-httplib.git
+    cd cpp-httplib
+    mkdir build
+    cd build
+    cmake -G "Unix Makefiles" ..
+    cmake --build .
 
-  - Download cpp-httplib and place it in the libs/ directory.
-  - Download SOCI and build it with MySQL support.
-  - Download nlohmann/json and place it in the libs/ directory.
- ### 3.Database Setup:
+  ```
+
+- Building json
+  ```
+    git clone https://github.com/nlohmann/json.git
+    cd json
+    mkdir build
+    cd build
+    cmake -G "Unix Makefiles" ..
+    cmake --build .
+  ```
+
+- Building soci
+  ```
+    git clone https://github.com/SOCI/soci.git 
+    cd soci
+    mkdir -p build
+    cd build
+    git checkout v4.0.1
+    cmake -DSOCI_TESTS=OFF -DSOCI_CXX11=ON  ..
+    make -j `nproc`
+    sudo make install
+
+  ```
+
+ ### 4.Database Setup:
 
   - Set up a MySQL database with a table named todo:
 
@@ -57,7 +93,8 @@ CREATE TABLE todo (
     date VARCHAR(255) NOT NULL
 );
   ```
- ### 4. Build the project:
+
+ ### 5. Build the project:
 
   -If using CMake, create a CMakeLists.txt file and build:
 
@@ -68,7 +105,7 @@ CREATE TABLE todo (
   cmake ..
   make
   ```
- ### 5. Run the Application:
+ ### 6. Run the Application:
 
   bash
   ```
