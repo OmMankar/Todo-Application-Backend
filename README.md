@@ -16,8 +16,8 @@ TodoApp is a C++ server application that provides a simple REST API for managing
 - C++17 or later.
 - MySQL server.
 - Required C++ Libraries files:
-    - **cpp-httplib**: HTTP server library ([cpp-httplib](https://github.com/yhirose/cpp-httplib))
-    - **nlohmann/json**: JSON parser ([nlohmann/json](https://github.com/nlohmann/json))
+    - **cpp-httplib**: HTTP server header only library ([cpp-httplib](https://github.com/yhirose/cpp-httplib))
+    - **nlohmann/json**: JSON parser header only library ([nlohmann/json](https://github.com/nlohmann/json))
     - **SOCI**: Database library with MySQL support ([SOCI](https://github.com/SOCI/soci))
    
 
@@ -33,17 +33,18 @@ TodoApp is a C++ server application that provides a simple REST API for managing
    ├──README.md                 # Project documentation
 ```
 ## Setup
- ### 1.Installing prerequisites (ubuntu)
-  ```
-  sudo apt install git cmake gcc g++ build-essential  libmysqlclient-dev
-  ```
 
- ### 2. Clone the repository:
+
+ ### 1. Clone the repository:
   ```
   git clone https://github.com/OmMankar/Todo-Application-Backend.git
   cd Todo-Application-Backend
   ```
- ### 3. Clone and Build dependencies:
+ ### 2. Clone and Build dependencies:
+ - Installing prerequisites (ubuntu)
+  ```
+  sudo apt install git cmake gcc g++ build-essential  libmysqlclient-dev
+  ```
 - Building cpp-httplib
   ```
     git clone https://github.com/yhirose/cpp-httplib.git
@@ -78,7 +79,7 @@ TodoApp is a C++ server application that provides a simple REST API for managing
 
   ```
 
- ### 4.Database Setup:
+ ### 3. Database Setup:
 
   - Set up a MySQL database with a table named todo:
 
@@ -94,7 +95,7 @@ CREATE TABLE todo (
 );
   ```
 
- ### 5. Build the project:
+ ### 4. Build the project:
 
   -If using CMake, create a CMakeLists.txt file and build:
 
@@ -105,7 +106,7 @@ CREATE TABLE todo (
   cmake ..
   make
   ```
- ### 6. Run the Application:
+ ### 5. Run the Application:
 
   bash
   ```
