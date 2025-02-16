@@ -85,7 +85,7 @@ CREATE TABLE todo (
 
   bash
   ```
-  mkdir build
+  mkdir -p build
   cd build
   cmake ..
   make
@@ -94,7 +94,7 @@ CREATE TABLE todo (
 
   bash
   ```
-  ./TodoApp
+  ./TodoAppServer
   ```
   The server will start at http://localhost:8080/.
 
